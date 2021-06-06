@@ -1,21 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DOCUMENTOS\\APLICACIONES WEB\\PetSafe c#\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\SpecFlowPetSafe\\SpecFlowPetSafe.csproj": {}
+    "C:\\Users\\georg\\OneDrive\\Desktop\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\SpecFlowPetSafe\\SpecFlowPetSafe.csproj": {}
   },
   "projects": {
-    "D:\\DOCUMENTOS\\APLICACIONES WEB\\PetSafe c#\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\PetSafe.API\\PetSafe.API.csproj": {
+    "C:\\Users\\georg\\OneDrive\\Desktop\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\PetSafe.API\\PetSafe.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DOCUMENTOS\\APLICACIONES WEB\\PetSafe c#\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\PetSafe.API\\PetSafe.API.csproj",
+        "projectUniqueName": "C:\\Users\\georg\\OneDrive\\Desktop\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\PetSafe.API\\PetSafe.API.csproj",
         "projectName": "PetSafe.API",
-        "projectPath": "D:\\DOCUMENTOS\\APLICACIONES WEB\\PetSafe c#\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\PetSafe.API\\PetSafe.API.csproj",
-        "packagesPath": "C:\\Users\\danys\\.nuget\\packages\\",
-        "outputPath": "D:\\DOCUMENTOS\\APLICACIONES WEB\\PetSafe c#\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\PetSafe.API\\obj\\",
+        "projectPath": "C:\\Users\\georg\\OneDrive\\Desktop\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\PetSafe.API\\PetSafe.API.csproj",
+        "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\georg\\OneDrive\\Desktop\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\PetSafe.API\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\danys\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -99,18 +106,25 @@
         }
       }
     },
-    "D:\\DOCUMENTOS\\APLICACIONES WEB\\PetSafe c#\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\SpecFlowPetSafe\\SpecFlowPetSafe.csproj": {
+    "C:\\Users\\georg\\OneDrive\\Desktop\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\SpecFlowPetSafe\\SpecFlowPetSafe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DOCUMENTOS\\APLICACIONES WEB\\PetSafe c#\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\SpecFlowPetSafe\\SpecFlowPetSafe.csproj",
+        "projectUniqueName": "C:\\Users\\georg\\OneDrive\\Desktop\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\SpecFlowPetSafe\\SpecFlowPetSafe.csproj",
         "projectName": "SpecFlowPetSafe",
-        "projectPath": "D:\\DOCUMENTOS\\APLICACIONES WEB\\PetSafe c#\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\SpecFlowPetSafe\\SpecFlowPetSafe.csproj",
-        "packagesPath": "C:\\Users\\danys\\.nuget\\packages\\",
-        "outputPath": "D:\\DOCUMENTOS\\APLICACIONES WEB\\PetSafe c#\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\SpecFlowPetSafe\\obj\\",
+        "projectPath": "C:\\Users\\georg\\OneDrive\\Desktop\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\SpecFlowPetSafe\\SpecFlowPetSafe.csproj",
+        "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\georg\\OneDrive\\Desktop\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\SpecFlowPetSafe\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\danys\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -123,8 +137,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\DOCUMENTOS\\APLICACIONES WEB\\PetSafe c#\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\PetSafe.API\\PetSafe.API.csproj": {
-                "projectPath": "D:\\DOCUMENTOS\\APLICACIONES WEB\\PetSafe c#\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\PetSafe.API\\PetSafe.API.csproj"
+              "C:\\Users\\georg\\OneDrive\\Desktop\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\PetSafe.API\\PetSafe.API.csproj": {
+                "projectPath": "C:\\Users\\georg\\OneDrive\\Desktop\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\PetSafe.API\\PetSafe.API.csproj"
               }
             }
           }
@@ -142,6 +156,18 @@
             "FluentAssertions": {
               "target": "Package",
               "version": "[5.10.3, )"
+            },
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Testing": {
+              "target": "Package",
+              "version": "[5.0.6, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",

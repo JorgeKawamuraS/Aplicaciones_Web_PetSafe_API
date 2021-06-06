@@ -1,0 +1,23 @@
+﻿2021-06-06T04:34:48.8357564-05:00;Thread#1;Info;Reading test run result from Json file "C:\Users\georg\AppData\Local\Temp\9906df7d-af6b-4a04-8505-88ce9aef5689".
+2021-06-06T04:34:48.8567334-05:00;Thread#1;Info;Successfully read test run result from Json file "C:\Users\georg\AppData\Local\Temp\9906df7d-af6b-4a04-8505-88ce9aef5689"
+2021-06-06T04:34:48.8567334-05:00;Thread#1;Info;Deserializing test run result
+2021-06-06T04:34:48.9704270-05:00;Thread#1;Error;System.Runtime.Serialization.SerializationException thrown during deserialization: System.Runtime.Serialization.SerializationException: No se puede encontrar el miembro 'ClassName'.
+   en System.Runtime.Serialization.SerializationInfo.GetElement(String name, Type& foundType)
+   en System.Runtime.Serialization.SerializationInfo.GetString(String name)
+   en System.Exception..ctor(SerializationInfo info, StreamingContext context)
+   en Void .ctor(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)(Object[] )
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateISerializable(JsonReader reader, JsonISerializableContract contract, JsonProperty member, String id)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   en Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   en Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   en Newtonsoft.Json.JsonSerializer.Deserialize[T](JsonReader reader)
+   en TechTalk.SpecRun.Framework.Services.JsonNetSerializer.Deserialize[T](FSharpOption`1 source)
+2021-06-06T04:34:48.9704270-05:00;Thread#1;Error;Test run result could not be loaded. The content of "C:\Users\georg\AppData\Local\Temp\9906df7d-af6b-4a04-8505-88ce9aef5689" is not a valid JSON test run result.
+2021-06-06T04:34:48.9704270-05:00;Thread#1;Error;Could not fetch the test run results.
+========== End of log file ==========
