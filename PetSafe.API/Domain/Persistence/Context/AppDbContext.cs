@@ -33,10 +33,46 @@ namespace PetSafe.API.Domain.Persistence.Context
         public DbSet<VeterinarySpecialty> VeterinarySpecialties { get; set; }
         public DbSet<VetProfile> VetProfiles { get; set; }
         public DbSet<VetVeterinary> VetVeterinaries { get; set; }
+        public DbSet<Chat> Chats { get; set; }
+        public DbSet<Message> Messages { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Appointment> Appointments { get; set; }
+        public DbSet<Schedule> Schedules { get; set; }
+        public DbSet<RecordatoryType> RecordatoryTypes { get; set; }
+        public DbSet<Recordatory> Recordatories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
+            //Appointment Entity
+            builder.Entity<Appointment>().ToTable("Appointments");
+
+            //Constraints
+            builder.Entity<Appointment>().HasKey(a => a.Id);
+            builder.Entity<Appointment>().Property(a => a.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Appointment>().Property(a => a.Date).IsRequired();
+
+            //RelationShips
+            builder.Entity<Appointment>().HasOne(a => a.Owner).WithMany(o => o.Appointments).HasForeignKey(a => a.OwnerId);
+            builder.Entity<Appointment>().HasOne(a => a.Veterinary).WithMany(v => v.Appointments).HasForeignKey(a => a.VeterinaryId);
+            builder.Entity<Appointment>().HasOne(a => a.Vet).WithMany(v => v.Appointments).HasForeignKey(a => a.VetId);
+            builder.Entity<Appointment>().HasOne(a => a.PetProfile).WithMany(p => p.Appointments).HasForeignKey(a => a.PetId);
+            builder.Entity<Appointment>().HasOne(a => a.Schedule).WithMany(os => os.Appointments).HasForeignKey(a => a.ScheduleId);
+
+
+            //Chat Entity
+            builder.Entity<Chat>().ToTable("Chats");
+
+            //Constraints
+            builder.Entity<Chat>().HasKey(c => c.Id);
+            builder.Entity<Chat>().Property(c => c.Id).IsRequired().ValueGeneratedOnAdd();
+
+            //Relationships
+            builder.Entity<Chat>().HasOne(c => c.ReceiverProfile).WithMany(pp => pp.ReceiverChats).HasForeignKey(c => c.ReceiverProfileId);
+            builder.Entity<Chat>().HasOne(c => c.SenderProfile).WithMany(pp => pp.SenderChats).HasForeignKey(c => c.SenderProfileId);
+            builder.Entity<Chat>().HasOne(c => c.Pet).WithMany(pp => pp.Chats).HasForeignKey(c => c.PetId);
+
 
             //City Entity
             builder.Entity<City>().ToTable("Cities");
@@ -49,12 +85,17 @@ namespace PetSafe.API.Domain.Persistence.Context
             //Relationships
             builder.Entity<City>().HasOne(pr => pr.Province).WithMany(pr => pr.Cities).HasForeignKey(pr => pr.ProvinceId);
 
-           //Seed Data
-            builder.Entity<City>().HasData
-                (
-                    new City { Id=100,Name="Lima" },
-                    new City { Id = 101, Name = "Republica Independiente de Arequipa" }
-                );
+
+            //Comment
+            builder.Entity<Comment>().ToTable("Comments");
+
+            //Contraints
+            builder.Entity<Comment>().HasKey(c => c.Id);
+            builder.Entity<Comment>().Property(c => c.Id).IsRequired().ValueGeneratedOnAdd();
+
+            //Relationships
+            builder.Entity<Comment>().HasOne(c => c.OwnerProfile).WithMany(op => op.Comments).HasForeignKey(c => c.OwnerProfileId);
+            builder.Entity<Comment>().HasOne(c => c.VeterinaryProfile).WithMany(vp => vp.Comments).HasForeignKey(c => c.VeterinaryProfileId);
 
 
             //Illness Entity
@@ -65,12 +106,17 @@ namespace PetSafe.API.Domain.Persistence.Context
             builder.Entity<Illness>().Property(i => i.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Illness>().Property(i => i.Name).IsRequired().HasMaxLength(30);
 
-            //Seed Data
-            builder.Entity<Illness>().HasData
-                (
-                    new Illness { Id = 100, Name = "Distemper" },
-                    new Illness { Id = 101, Name = "Sarna" }
-                );
+
+            //Message Entity
+            builder.Entity<Message>().ToTable("Messages");
+
+            //Constraints
+            builder.Entity<Message>().HasKey(m => m.Id);
+            builder.Entity<Message>().Property(m => m.Id).IsRequired().ValueGeneratedOnAdd();
+
+            //Relationships
+            builder.Entity<Message>().HasOne(m => m.Chat).WithMany(cr => cr.Messages).HasForeignKey(m=>m.ChatId);
+
 
             //OwnerLocation Entity
             builder.Entity<OwnerLocation>().ToTable("OwnerLocations");
@@ -173,6 +219,39 @@ namespace PetSafe.API.Domain.Persistence.Context
             builder.Entity<Province>().Property(pr => pr.Name).IsRequired().HasMaxLength(30);
 
 
+            //Recordatory Entity
+            builder.Entity<Recordatory>().ToTable("Recordatories");
+
+            //Constraints
+            builder.Entity<Recordatory>().HasKey(r=>r.Id);
+            builder.Entity<Recordatory>().Property(r=>r.Id).IsRequired().ValueGeneratedOnAdd();
+
+            //Relationships
+            builder.Entity<Recordatory>().HasOne(r => r.Vet).WithMany(r => r.Recordatories).HasForeignKey(r => r.VetId);
+            builder.Entity<Recordatory>().HasOne(r => r.Owner).WithMany(ow => ow.Recordatories).HasForeignKey(r => r.OwnerId);
+            builder.Entity<Recordatory>().HasOne(r => r.Pet).WithMany(p => p.Recordatories).HasForeignKey(r=>r.PetId);
+            builder.Entity<Recordatory>().HasOne(r => r.Schedule).WithMany(s => s.Recordatories).HasForeignKey(r=>r.ScheduleId);
+            builder.Entity<Recordatory>().HasOne(r => r.RecordatoryType).WithMany(rt => rt.Recordatories).HasForeignKey(r=>r.RecordatoryTypeId);
+
+
+            //RecordatoryType Entity
+            builder.Entity<RecordatoryType>().ToTable("RecordatoryTypes");
+
+            //Constraints
+            builder.Entity<RecordatoryType>().HasKey(rt => rt.Id);
+            builder.Entity<RecordatoryType>().Property(rt => rt.Id).IsRequired().ValueGeneratedOnAdd();
+
+
+            //Schedule
+            builder.Entity<Schedule>().ToTable("Schedules");
+
+            //Constraints
+            builder.Entity<Schedule>().HasKey(s => s.Id);
+            builder.Entity<Schedule>().Property(s => s.Id).IsRequired().ValueGeneratedOnAdd();
+
+            //RelationShips
+            builder.Entity<Schedule>().HasOne(s => s.Profile).WithOne(p => p.Schedule).HasForeignKey<Schedule>(s => s.ProfileId);
+
 
             //Specialty Entity
             builder.Entity<Specialty>().ToTable("Specialties");
@@ -201,7 +280,7 @@ namespace PetSafe.API.Domain.Persistence.Context
             builder.Entity<User>().Property(pr => pr.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<User>().Property(pr => pr.Mail).IsRequired();
             builder.Entity<User>().Property(pr => pr.Password).IsRequired();
-            builder.Entity<User>().Property(pr => pr.UserType).IsRequired();
+            builder.Entity<User>().Property(pr => pr.UserTypeVet).IsRequired();
 
 
             //UserPlan Entity
@@ -245,7 +324,7 @@ namespace PetSafe.API.Domain.Persistence.Context
             builder.Entity<VetProfile>().Property(vp => vp.ExperienceYear);
 
             //Relationships
-            builder.Entity<VetProfile>().HasOne(owp => owp.User).WithOne(u => u.VetProfile).HasForeignKey<VetProfile>(owp => owp.UserId);//Doubt
+            builder.Entity<VetProfile>().HasOne(owp => owp.User).WithOne(u => u.VetProfile).HasForeignKey<VetProfile>(owp => owp.UserId);
 
 
             //VetVeterinary Entity

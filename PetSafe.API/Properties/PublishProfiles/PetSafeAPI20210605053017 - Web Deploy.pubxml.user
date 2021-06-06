@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAEAjt/lnuRUK1etvY8vw6EwAAAAACAAAAAAAQZgAAAAEAACAAAAASTaqeVyeu0OJqe5GKTxu6HFTBCeWCuCX8bq6Kyn2nhAAAAAAOgAAAAAIAACAAAAADbPP0cNN76r3lxDH6caqPBmmZCxU9sUGI0wDHhMRYroAAAACy76QbPudQomAg+vZAaXak7cR0L1uEl8S+wjY0QIIiU8YDZTi1kTr75yLoWFwgwuANM/u6oWoUeQgg1Pj/fiRtMUUzCU9yjLqdA/f45xCIc5rJ0gE1A6jwhKVNVjzIiUsDUVoR8RQoYkZ/FN4iH894fPeAJyGMUSPTuXH6RIsnukAAAADWCHwhEkBwlu+zMTVLa5ljRJKADSWhwPDN0a6a2xzai9IvRLSOFwtJmo9jPHv8inZL2R7hlj5PwGpWIRJ3dz3R</EncryptedPassword>
+    <History>True|2021-06-06T01:53:25.3226813Z;True|2021-06-05T20:50:01.1897810-05:00;True|2021-06-05T20:49:26.6511196-05:00;True|2021-06-05T20:46:16.2777079-05:00;False|2021-06-05T20:45:36.0396688-05:00;True|2021-06-05T20:43:13.7922108-05:00;True|2021-06-05T20:41:26.9663041-05:00;True|2021-06-05T05:45:20.9168974-05:00;False|2021-06-05T05:42:52.3055556-05:00;True|2021-06-05T05:40:50.0538338-05:00;False|2021-06-05T05:39:57.3349612-05:00;False|2021-06-05T05:39:15.7061900-05:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="AzureMySQLConnection">
+      <Value>Data Source=tcp:petsafe-apidbserver.database.windows.net,1433%3bInitial Catalog=PetSafe.API_db%3bUser Id=kawa%40petsafe-apidbserver%3bPassword=jirafa118J</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

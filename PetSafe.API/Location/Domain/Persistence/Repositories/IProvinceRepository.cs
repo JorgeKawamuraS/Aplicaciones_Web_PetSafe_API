@@ -1,0 +1,17 @@
+﻿using PetSafe.API.Domain.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace PetSafe.API.Domain.Persistence.Repositories
+{
+    public interface IProvinceRepository
+    {
+        Task<IEnumerable<Province>> ListAsync();
+        Task<Province> FindById(int id);
+        Task AddAsync(Province province);
+        void Update(Province province);
+        void Remove(Province province);
+    }
+}

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="PetSafeAPI-Deploy" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\DOCUMENTOS\\APLICACIONES\ WEB\\PetSafe\ c\#\\PetSafe\ c\#\\Aplicaciones_Web_PetSafe_API\\PetSafe\.API\\obj\\Release\\net5\.0\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>

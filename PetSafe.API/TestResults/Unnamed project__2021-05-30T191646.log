@@ -1,0 +1,27 @@
+﻿2021-05-30T19:16:45.9886647-05:00;VSTestExecutionThread;Info;SpecFlow+Runner execution started
+2021-05-30T19:16:45.9887991-05:00;VSTestExecutionThread;Info;SpecFlow+Runner 3.8.12 in Framework net50 in x64 mode execution started
+2021-05-30T19:16:45.9888012-05:00;VSTestExecutionThread;Info;TestAdapter Location: C:\Users\georg\OneDrive\Desktop\PetSafe c#\Aplicaciones_Web_PetSafe_API\SpecFlowPetSafe\bin\Debug\net5.0\TechTalk.SpecRun.VisualStudio.TestAdapter.dll
+2021-05-30T19:16:45.9905167-05:00;VSTestExecutionThread;Info;Current UserName: 'georg', MachineName: 'LAPTOP-H8BQV4JP'
+2021-05-30T19:16:46.0128988-05:00;VSTestExecutionThread;Info;SpecRun: running tests in C:\Users\georg\OneDrive\Desktop\PetSafe c#\Aplicaciones_Web_PetSafe_API\SpecFlowPetSafe\bin\Debug\net5.0\SpecFlowPetSafe.dll
+2021-05-30T19:16:46.0130618-05:00;VSTestExecutionThread;Info;Output folder configured to "C:\Users\georg\OneDrive\Desktop\PetSafe c#\Aplicaciones_Web_PetSafe_API\PetSafe.API\TestResults" (default)
+2021-05-30T19:16:46.0131075-05:00;VSTestExecutionThread;Info;Profile: 
+2021-05-30T19:16:46.2118738-05:00;VSTestExecutionThread;Info;Log file path: C:\Users\georg\OneDrive\Desktop\PetSafe c#\Aplicaciones_Web_PetSafe_API\PetSafe.API\TestResults\Unnamed project__2021-05-30T191646.log
+2021-05-30T19:16:46.2164027-05:00;Thread#12;Info;Checking activation
+2021-05-30T19:16:47.6740470-05:00;Thread#12;Error;****************************************************************************************************************
+2021-05-30T19:16:47.6742646-05:00;Thread#12;Error;*                                           SpecFlow+ Runner                                                   *
+2021-05-30T19:16:47.6743226-05:00;Thread#12;Error;****************************************************************************************************************
+2021-05-30T19:16:47.6745536-05:00;Thread#12;Error;Please sign-up for your free SpecFlow account or sign-in with your already existing account here:
+2021-05-30T19:16:47.6746808-05:00;Thread#12;Error;https://account.specflow.org/clientactivation/welcome/Runner/88E844BB9B434BD7887F27B4ED73D8C852F7BEAEAD02840D455134CC8B2A986D522C44AF/NotActivatedYet
+2021-05-30T19:16:47.6747957-05:00;Thread#12;Error;to execute your Scenarios again.
+2021-05-30T19:16:47.6749603-05:00;Thread#12;Error;If you are reading this message on a build agent, we couldn't recognize the agent.
+2021-05-30T19:16:47.6750281-05:00;Thread#12;Error;Please get in touch with us at support@specflow.org.
+2021-05-30T19:16:47.6751705-05:00;Thread#12;Error;****************************************************************************************************************
+2021-05-30T19:16:47.6784065-05:00;Thread#12;Error;No tests executed (activation needed)
+2021-05-30T19:16:48.1753872-05:00:Total: 0
+2021-05-30T19:16:48.1769567-05:00:Succeeded: 0
+2021-05-30T19:16:48.1771891-05:00:Ignored: 0
+2021-05-30T19:16:48.1773733-05:00:Pending: 0
+2021-05-30T19:16:48.1779834-05:00:Skipped: 0
+2021-05-30T19:16:48.1782324-05:00:Failed: 0
+2021-05-30T19:16:48.1826119-05:00;VSTestExecutionThread;Info;Adding attachments to VSTest
+========== End of log file ==========

@@ -27,6 +27,12 @@ namespace PetSafe.API.Mapping
             CreateMap<SaveVeterinaryProfileResource,VeterinaryProfile>();
             CreateMap<SaveVetProfileResource,VetProfile>();
             CreateMap<SaveVetVeterinaryResource,VetVeterinary>();
+            CreateMap<SaveOwnerLocationResource, OwnerLocation>();
+            CreateMap<SaveAppointmentResource,Appointment>();
+            CreateMap<SaveCommentResource,Comment>();
+            CreateMap<SaveMessageResource,Message>();
+            CreateMap<SaveRecordatoryResource,Recordatory>();
+            CreateMap<SaveRecordatoryTypeResource,RecordatoryType>();
         }
     }
 }

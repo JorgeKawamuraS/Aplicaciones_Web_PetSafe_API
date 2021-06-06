@@ -6579,30 +6579,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\georg\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\danys\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\georg\\OneDrive\\Desktop\\Carpetas\\ejercicios\\C#\\PetSafe.API.Test\\PetSafe.API.Test.csproj",
+      "projectUniqueName": "D:\\DOCUMENTOS\\APLICACIONES WEB\\PetSafe c#\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\PetSafe.API.Test\\PetSafe.API.Test.csproj",
       "projectName": "PetSafe.API.Test",
-      "projectPath": "C:\\Users\\georg\\OneDrive\\Desktop\\Carpetas\\ejercicios\\C#\\PetSafe.API.Test\\PetSafe.API.Test.csproj",
-      "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\georg\\OneDrive\\Desktop\\Carpetas\\ejercicios\\C#\\PetSafe.API.Test\\obj\\",
+      "projectPath": "D:\\DOCUMENTOS\\APLICACIONES WEB\\PetSafe c#\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\PetSafe.API.Test\\PetSafe.API.Test.csproj",
+      "packagesPath": "C:\\Users\\danys\\.nuget\\packages\\",
+      "outputPath": "D:\\DOCUMENTOS\\APLICACIONES WEB\\PetSafe c#\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\PetSafe.API.Test\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\danys\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -6615,8 +6605,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\georg\\OneDrive\\Desktop\\Carpetas\\ejercicios\\C#\\PetSafe.API\\PetSafe.API.csproj": {
-              "projectPath": "C:\\Users\\georg\\OneDrive\\Desktop\\Carpetas\\ejercicios\\C#\\PetSafe.API\\PetSafe.API.csproj"
+            "D:\\DOCUMENTOS\\APLICACIONES WEB\\PetSafe c#\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\PetSafe.API\\PetSafe.API.csproj": {
+              "projectPath": "D:\\DOCUMENTOS\\APLICACIONES WEB\\PetSafe c#\\PetSafe c#\\Aplicaciones_Web_PetSafe_API\\PetSafe.API\\PetSafe.API.csproj"
             }
           }
         }

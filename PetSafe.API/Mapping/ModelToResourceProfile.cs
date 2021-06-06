@@ -26,14 +26,19 @@ namespace PetSafe.API.Mapping
             CreateMap<Province, ProvinceResource>();
             CreateMap<Specialty, SpecialtyResource>();
             CreateMap<Treatment, TreatmentResource>();
-            CreateMap<User, UserResource>()
-                .ForMember(src=>src.UserType,
-                opt=>opt.MapFrom(src=>src.UserType.ToDescriptionString()));
+            CreateMap<User, UserResource>();
             CreateMap<UserPlan, UserPlanResource>();
             CreateMap<VeterinaryProfile, VeterinaryProfileResource>();
             CreateMap<VeterinarySpecialty, VeterinarySpecialtyResource>();
-            CreateMap<VetProfile, VetProfile>();
+            CreateMap<VetProfile, VetProfileResource>();
             CreateMap<VetVeterinary, VetVeterinaryResource>();
+            CreateMap<Appointment,AppointmentResource>();
+            CreateMap<Chat,ChatResource>();
+            CreateMap<Comment,CommentResource>();
+            CreateMap<Message,MessageResource>();
+            CreateMap<Recordatory,RecordatoryResource>();
+            CreateMap<RecordatoryType,RecordatoryTypeResource>();
+            CreateMap<Schedule,ScheduleResource>();
         }
     }
 }

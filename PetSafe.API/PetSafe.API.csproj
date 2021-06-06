@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>b5277437-b568-436b-b6dc-603170455747</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,6 +15,13 @@
     <PackageReference Include="MySql.EntityFrameworkCore" Version="5.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
     <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Domain\Models\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>

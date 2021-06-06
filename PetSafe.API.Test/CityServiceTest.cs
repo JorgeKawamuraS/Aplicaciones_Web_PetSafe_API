@@ -24,11 +24,13 @@ namespace PetSafe.API.Test
             var mockCityRepository = GetDefaultICityRepositoryInstance();
             var mockUnitOfWork = GetDefaultIUnitOfWorkInstance();
             var mockOwnerLocationRepository = GetDefaultIOwnerLocationRepositoryInstance();
+            var mockProvinceRepository = GetDefaultIProvinceRepositoryInstance();
             var cityId = 1;
             mockCityRepository.Setup(r => r.FindById(cityId))
                 .Returns(Task.FromResult<City>(null));
 
-            var service = new CityService(mockCityRepository.Object,mockOwnerLocationRepository.Object,mockUnitOfWork.Object);
+            var service = new CityService(mockCityRepository.Object,mockOwnerLocationRepository.Object,
+                mockUnitOfWork.Object,mockProvinceRepository.Object);
 
             //Act
             CityResponse result = await service.GetByIdAsync(cityId);
@@ -46,14 +48,25 @@ namespace PetSafe.API.Test
             var mockCityRepository = GetDefaultICityRepositoryInstance();
             var mockUnitOfWork = GetDefaultIUnitOfWorkInstance();
             var mockOwnerLocationRepository = GetDefaultIOwnerLocationRepositoryInstance();
-            City city = new City { Id = 10, Name = "SJL", ProvinceId = 101 };
+            var mockProvinceRepository = GetDefaultIProvinceRepositoryInstance();
+            Province province = new Province { Id = 1, Name = "Lima" };
+            City city = new City { Id = 10, Name = "SJL"};
+
+            mockProvinceRepository.Setup(p => p.AddAsync(province))
+                .Returns(Task.FromResult<Province>(province));
+
+            mockProvinceRepository.Setup(p=>p.FindById(1))
+                .Returns(Task.FromResult<Province>(province));
+
             mockCityRepository.Setup(r => r.AddAsync(city))
                 .Returns(Task.FromResult<City>(city));
 
-            var service = new CityService(mockCityRepository.Object, mockOwnerLocationRepository.Object, mockUnitOfWork.Object);
+
+            var service = new CityService(mockCityRepository.Object, mockOwnerLocationRepository.Object,
+                mockUnitOfWork.Object, mockProvinceRepository.Object);
 
             //Act
-            CityResponse result = await service.SaveAsync(city);
+            CityResponse result = await service.SaveAsync(1,city);
 
             //Assert
             result.Resource.Should().Be(city);
@@ -66,6 +79,10 @@ namespace PetSafe.API.Test
         private Mock<ICityRepository> GetDefaultICityRepositoryInstance()
         {
             return new Mock<ICityRepository>();
+        }
+        private Mock<IProvinceRepository> GetDefaultIProvinceRepositoryInstance()
+        {
+            return new Mock<IProvinceRepository>();
         }
         private Mock<IUnitOfWork> GetDefaultIUnitOfWorkInstance()
         {

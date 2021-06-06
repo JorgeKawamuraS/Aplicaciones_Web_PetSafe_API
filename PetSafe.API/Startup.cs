@@ -39,7 +39,8 @@ namespace PetSafe.API
 
             services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseMySQL(Configuration.GetConnectionString("DefaultConnection"));
+                //options.UseMySQL(Configuration.GetConnectionString("DefaultConnection"));
+                options.UseMySQL(Configuration.GetConnectionString("AzureMySQLConnection"));
             });
 
             // Dependency Injection Configuration
@@ -63,7 +64,13 @@ namespace PetSafe.API
             services.AddScoped<IVeterinarySpecialtyRepository, VeterinarySpecialtyRepository>();
             services.AddScoped<IVetProfileRepository, VetProfileRepository>();
             services.AddScoped<IVetVeterinaryRepository, VetVeterinaryRepository>();
-
+            services.AddScoped<IAppointmentRepository, AppointmentRepository>();
+            services.AddScoped<IChatRepository, ChatRepository>();
+            services.AddScoped<IMessageRepository, MessageRepository>();
+            services.AddScoped<ICommentRepository, CommentRepository>();
+            services.AddScoped<IRecordatoryRepository, RecordatoryRepository>();
+            services.AddScoped<IRecordatoryTypeRepository, RecordatoryTypeRepository>();
+            services.AddScoped<IScheduleRepository, ScheduleRepository>();
 
 
             services.AddScoped<ICityService, CityService>();
@@ -85,6 +92,13 @@ namespace PetSafe.API
             services.AddScoped<IVeterinarySpecialtyService, VeterinarySpecialtyService>();
             services.AddScoped<IVetProfileService, VetProfileService>();
             services.AddScoped<IVetVeterinaryService, VetVeterinaryService>();
+            services.AddScoped<IAppointmentService, AppointmentService>();
+            services.AddScoped<IChatService, ChatService>();
+            services.AddScoped<IMessageService, MessageService>();
+            services.AddScoped<ICommentService, CommentService>();
+            services.AddScoped<IRecordatoryService, RecordatoryService>();
+            services.AddScoped<IRecordatoryTypeService, RecordatoryTypeService>();
+            services.AddScoped<IScheduleService, ScheduleService>();
 
             //Apply Endpoint Naming Convention
             services.AddRouting(options => options.LowercaseUrls = true);
